@@ -1,0 +1,39 @@
+/*==============================================================*/
+/* font functions */
+
+/*
+  FONT
+  offset	size
+  0		word	capital A index, low byte first
+  2		word	small a index, low byte first
+  4		byte		bbox width
+  5		byte		bbox height
+  6		byte		bbox descent
+  7-		variable (characters with code 0x20 - 0x7f)
+  
+  
+  CHARACTER (Format 1)
+  offset	size
+  0		byte			total size of the structure, including this byte
+  1		bits 0..4		width
+  1		bits 5..7		descent
+  2		byte			height
+  3-		varable (bitmap, topmost line first)
+  
+  +====+  ====							====
+  |		|								upper space (ascent area)
+  |		|						====	====
+  |		|
+  |		|  bbox					height
+  |		|  height
+  |=====|		====	====							====baseline===
+  |		|		bbox d	descent
+  |		|				====	====	====
+  |		|								lower space (descent area)
+  +====+  ====	====					====		
+  
+  upper space + lower space = bbox height - height
+  lower space = bbox descent - descent
+  upper space = bbox height + descent - height - bbox descent 
+
+*/
