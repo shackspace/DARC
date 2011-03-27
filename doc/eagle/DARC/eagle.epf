@@ -330,10 +330,13 @@ UsedLibrary="/Applications/EAGLE/lbr/xilinx-xc9.lbr"
 UsedLibrary="/Applications/EAGLE/lbr/xilinx-xcv.lbr"
 UsedLibrary="/Applications/EAGLE/lbr/zetex.lbr"
 UsedLibrary="/Applications/EAGLE/lbr/zilog.lbr"
+UsedLibrary="lf33.lbr"
+UsedLibrary="ea_dogl128.lbr"
+UsedLibrary="tda7050.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="84 125 683 524"
+Loc="32 198 843 723"
 State=2
 Number=0
 
